@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
 # Create your views here.
-def base(response):
-    return render(response,"website/base.html")
-def home(response):
-    return render(response,"website/home.html")
-def events(response):
-    return render(response,"website/event.html")
-def about(response):
-    return render(response,"website/about.html")
-def contact(response):
-    return render(response,"website/contact.html")
+def base(request):
+    return render(request,"templates/base.html")
+def home(request):
+    return render(request,"templates/home.html")
+def events(request):
+    return render(request,"templates/event.html")
+def about(request):
+    return render(request,"templates/about.html")
+def contact(request):
+    return render(request,"templates/contact.html")

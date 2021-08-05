@@ -59,7 +59,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'Blog/templates').replace('\\', '/'),
+            os.path.join(BASE_DIR, 'blog/templates').replace('\\', '/'),
             os.path.join(BASE_DIR, 'website/templates').replace('\\', '/'),
         ],
         'APP_DIRS': True,

@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/page.css'%}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'Blog Home' %}" class="text-gray">Blog</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}">
+                        <li class="nav-link">
+                            Home
+                        </li>
+                    </a>
+                    <a href="{% url 'Blog Home' %}">
+                        <li class="nav-link">
+                            Blog
+                        </li>
+                    </a>
+
+                    <a href="{% url 'About' %}">
+                        <li class="nav-link">
+                            About
+                        </li>
+                    </a>
+                    <a href="{% url 'Contact' %}">
+                        <li class="nav-link">
+                            Contact Us
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main style="align-items:center;">
+
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="{% static 'images/Blog-post/post-1.jpg'%}" class="img" alt="blog1" />
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Dr.Anil Kumar Markana</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;7th November, 2019</span>
+                            </div>
+
+                        </div>
+                        <div class="post-title">
+                            <a href="#">Why should boys have all the fun? it's the women who are
+                                making india an alcohol-loving contry</a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque obcaecati id,
+                                nulla pariatur sit
+                                est voluptate, asperiores molestiae et porro voluptatibus molestias veniam enim,
+                                officiis veritatis nam
+                                assumenda voluptatem consequuntur eligendi eos quidem ad corporis officia. Distinctio
+                                quae, quia quam,
+                                repellendus vero, aliquam accusamus error modi ex ratione nam est officia quo natus.
+                                Nemo, eius. Excepturi
+                                rem doloremque earum tenetur ducimus nisi esse obcaecati quasi doloribus reprehenderit?
+                                Nobis repudiandae
+                                nulla aut suscipit ad possimus quas neque enim optio consequatur explicabo sequi, fuga
+                                consequuntur amet?
+                                Molestias vitae deleniti saepe accusamus blanditiis, optio corporis quae odit
+                                repudiandae sapiente
+                                quibusdam placeat, temporibus libero numquam recusandae iusto provident facilis nam in
+                                sequi, quia officia
+                                nulla expedita eum. Labore iusto incidunt rem, cumque nobis mollitia dolorum odit ad
+                                quibusdam unde iure
+                                dignissimos similique odio, molestias aut, rerum blanditiis praesentium repellat
+                                recusandae officiis ipsam
+                                dolorem? Quos, non? Neque quaerat eius architecto necessitatibus at ad quisquam dolorem
+                                corrupti quibusdam
+                                eveniet! Fugiat fugit minus, dolore facere molestias quos quam officiis pariatur
+                                necessitatibus obcaecati,
+                                delectus cum, deserunt porro aliquid velit quod sed tempore. Sit necessitatibus
+                                reiciendis quae facere
+                                reprehenderit nobis fugit illo, deserunt architecto sint quos saepe quisquam dicta
+                                tenetur rerum nam
+                                repellendus sapiente similique ullam, maiores fugiat ipsum commodi. Omnis, repudiandae
+                                exercitationem
+                                similique esse laboriosam ullam, labore magnam fuga optio obcaecati unde ipsa quasi
+                                suscipit accusamus a
+                                dignissimos in veniam adipisci, tenetur velit vitae accusantium atque voluptatibus? Sed
+                                ea qui praesentium
+                                aut suscipit rerum harum iure et, nostrum nihil, dolorem eligendi adipisci. Dolores et
+                                asperiores quas
+                                nemo facilis beatae quibusdam tempore commodi eum modi aperiam magnam, molestiae laborum
+                                nisi vero,
+                                exercitationem necessitatibus numquam. Modi ut enim eius ullam tempore tempora ducimus
+                                ipsam sed, minima
+                                officia pariatur consectetur. Placeat voluptatem voluptas, deserunt impedit libero
+                                veritatis. Excepturi at
+                                officia, aspernatur necessitatibus quasi doloribus deserunt nihil quaerat corrupti quia
+                                molestias vel
+                                tenetur quod facilis! Ipsa sit fuga sapiente corrupti, ullam tempore a error, modi
+                                cupiditate quis amet
+                                unde earum quo. Esse laboriosam commodi nostrum consequuntur necessitatibus similique
+                                fugiat fuga aut
+                                molestiae consequatur soluta delectus, est alias ad voluptas perferendis excepturi
+                                consectetur. Eligendi
+                                consectetur culpa maxime natus quos doloribus deleniti repellendus unde! Enim optio esse
+                                ipsam, quas
+                                assumenda quae possimus tempore, voluptates recusandae, quibusdam eveniet iusto officiis
+                                soluta tempora
+                                consequuntur! Provident perspiciatis nisi at, nesciunt eos doloribus molestias in
+                                deleniti debitis illum
+                                ea veniam eum facere unde earum possimus odit dolorum expedita similique repudiandae.
+                                Dolor quaerat
+                                exercitationem deserunt natus laborum sit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-image">  
+                    <!--  to write on side  -->
+                    
+                </div>
+            </div>
+            
+        </section>
+
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>IEEE, an association dedicated to advancing innovation and technological excellence for the benefit
+                    of humanity,
+                    is the world's largest technical professional society.
+                    It is designed to serve professionals involved in all aspects of the electrical,
+                    electronic, and computing fields and related areas of science and technology that underlie modern
+                    civilization.</p>
+            </div>
+
+
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

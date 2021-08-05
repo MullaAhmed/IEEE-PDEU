@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dus&xo(ogbabo&!!$(cnr3s8j*+)m&5$umc^*d^j37e90g!#)d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["ieee-pdeu-test.herokuapp.com",'127.0.0.1']
 
@@ -126,12 +126,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# if DEBUG:
-#     STATICFILES_DIRS = [
-#         os.path.join(BASE_DIR, 'IEEE/static').replace('\\', '/')
-#     ]
-# else:
-STATIC_ROOT = os.path.join(BASE_DIR, 'IEEE/static').replace('\\', '/')
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'IEEE/static').replace('\\', '/')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'IEEE/static').replace('\\', '/')
 
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'IEEE\\static'),

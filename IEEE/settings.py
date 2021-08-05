@@ -127,10 +127,10 @@ STATIC_URL = '/static/'
 
 if DEBUG:
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'IEEE\\static')
+        os.path.join(BASE_DIR, 'IEEE/static').replace('\\', '/')
     ]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'IEEE\\static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'IEEE/static').replace('\\', '/')
 
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'IEEE\\static'),

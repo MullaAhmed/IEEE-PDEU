@@ -2,12 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 def base(request):
-    return render(request,"templates/base.html")
+    return render(request,"base.html")
 def home(request):
-    return render(request,"templates/home.html")
+    return render(request,"home.html")
 def events(request):
-    return render(request,"templates/event.html")
+    return render(request,"event.html")
 def about(request):
-    return render(request,"templates/about.html")
+    return render(request,"about.html")
 def contact(request):
-    return render(request,"templates/contact.html")
+    return render(request,"contact.html")

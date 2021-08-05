@@ -124,8 +124,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT=os.path.join(BASE_DIR,'IEEE\\static')
-STATICFILES_DIRS = ['../IEEE/static/']
+
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'IEEE\\static')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'IEEE\\static')
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'IEEE\\static'),
+# ]
+# print(STATIC_DIR)
+# STATICFILES_DIRS = ['../IEEE/static/']
 
 
 # Default primary key field type

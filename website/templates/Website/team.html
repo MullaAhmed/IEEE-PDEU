@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+.sec4{
+  padding: 100px 0;
+}
+.sec4 h1{
+  text-transform: uppercase;
+  color:azure;
+}
+.sec4-boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+.box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19%;
+  min-height: 270px;
+  border: 1px solid #fff;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+@media (max-device-width: 600px) {
+  .box{
+    width: 100%;
+    justify-content: center;
+  }
+ .img{
+    display: block;
+    margin-left:10%;
+  }
+}
+.box h6{
+  font-family:'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color:azure;
+}
+.sec4-boxes .img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all ease 1s;
+}
+.box:hover .img{
+  opacity: 1;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'team' %}" class="text-gray">Team</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}"><li class="nav-link">
+                        Home
+                    </li></a>
+                    <a href="{% url 'Blog Home' %}"><li class="nav-link">
+                        Blog
+                    </li></a>
+
+                     <a href="{% url 'About' %}"><li class="nav-link">
+                       About
+                    </li></a>
+                    <a href="{% url 'Contact' %}">  <li class="nav-link">
+                       Contact Us
+                    </li></a>              
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main>
+      <section class="sec4" data-scene>
+        <div class="container">
+          <div class="sec4-inner" data-aos="zoom-out-right">
+            <a name="op1234"><h1>Our Team</h1></a>
+            <div class="sec4-boxes">
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <h6>Team</h6>
+                <div class="img">
+                  <img src="{% static 'images/collection-img1.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+  
+
+       
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>IEEE, an association dedicated to advancing innovation and technological excellence for the benefit of humanity, 
+                    is the world's largest technical professional society. 
+                    It is designed to serve professionals involved in all aspects of the electrical, 
+                    electronic, and computing fields and related areas of science and technology that underlie modern civilization.</p>
+            </div>
+            
+           
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    main .site-title{
+    background: url( "{% static 'images/events.jpg' %}");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+main .blog{
+    background: url("{% static 'images/Abract01.png' %}");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'events' %}" class="text-gray">Events</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}"><li class="nav-link">
+                        Home
+                    </li></a>
+                    <a href="{% url 'Blog Home' %}"><li class="nav-link">
+                        Blog
+                    </li></a>
+
+                     <a href="{% url 'About' %}"><li class="nav-link">
+                       About
+                    </li></a>
+                    <a href="{% url 'Contact' %}">  <li class="nav-link">
+                       Contact Us
+                    </li></a>              
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                <img src="{% static 'images/logo.svg' %}" alt="" />
+               <h2>Events Section</h2>
+
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Optio ipsa ex fugit assumenda cupiditate dolores eius quos qui impedit. Iure nam similique doloremque minima molestiae.</p>
+            </div>
+        </section>
+
+        <!------------x----------- Site Title ----------x----------->
+
+        <!-- --------------------- Blog Carousel ----------------- -->
+
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-1.jpg'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Annual Report
+                                    <br>2019-2020
+                                </h3>
+                               <a href="https://drive.google.com/file/d/1B8v0U1hw_YBIA29SGiwA6ZGMxxrkHW01/view?usp=sharing" target="blank"> <button class="btn btn-blog">Read More</button></a>
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-3.jpg'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Annual Report
+                                    <br>2018-2019
+                                </h3>
+                               <a href="https://drive.google.com/file/d/1cO_cqdmjBsH_hC8te9ClRa-_PzsDHgPe/view?usp=sharing" target="blank"> <button class="btn btn-blog">Read More</button></a>
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-2.jpg'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Annual Report
+                                    <br>2017-2018
+                                </h3>
+                               <a href="https://drive.google.com/file/d/1ALBuKp1ib3nELS1c2EX4oCXzTV8X7ETi/view?usp=sharing" target="blank"> <button class="btn btn-blog">Read More</button></a>
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-5.png'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Annual Report</h3>
+                               <a href=""> <button class="btn btn-blog">Read More</button></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------x---------- Blog Carousel --------x-------- -->
+
+        <!-- ---------------------- Site Content -------------------------->
+
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <h1 style="color: azure; font-size:5 rem;">Past Events</h1>
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=1pewQWEPaEwDgYuYp4ml9YTyL7abI-CWf" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Dr. Prakash Kotecha</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;October 10th, 2019 </span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a >Computer Aided Optimization Workshop</a>
+                            <p>The motive of the event was to acquaint our workshop participants with the theory to optimization, different parts of optimization, 
+                                and types of solution as well with an in-depth knowledge of objective function and understand topics such as constraint satisfying problems. 
+                                The participants were expected to understand codes on teaching learning based optimization by the end of the lab session based workshop.
+                            </p>
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                   <!-- ----------------------------------------------------------------------------------------------- -->
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=1Mi3EUenOoNzzKeTrLaUqe1CNWUtwbR1I" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Dr.Anil Kumar Markana</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;7th November, 2019</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a >LaTeX Workshop</a>
+                            <p>The motive of conducting a workshop on LaTeX was to impart knowledge regarding the importance of a well formatted 
+                                research paper along with practical coding techniques in-order for our participants to understand and learn coding using 
+                                latex software for their research work. As LaTeX is a helpful rendering of high-quality typesetting software and is an existing 
+                                approach for creating documents nowadays. Currently, many academic papers, scientific or technical papers use LaTeX to embrace a 
+                                top-notch layout. It also eases the readability of a document by enhancing its appearance. 
+                                After the completion of our workshop participants were to be able to apply LaTeX into their research and academics. 
+                            </p>
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                   <!-- --------------------------------------------------------------- -->
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=1D511TT43XtZiuFWd8y0dGKFPrj7I-B5i" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Dr. Kaustub Sadhekar</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;9th and 10th November, 2019</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a >Computer Vision Workshop</a>
+                            <p>The motive of conducting the workshop was to impart the necessary and sufficient knowledge over Computer Vision which includes methods 
+                                for acquiring, processing, analyzing and understanding digital images, and extraction of high-dimension data from the real world in order 
+                                to produce numerical or symbolic information. The complex and Integrated programme system was delivered in the most simplified manner 
+                                and with ease to the participants through the workshop.
+                            </p>
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                   
+                   <!-- ----------------------------------------------------------------------------------------------- -->
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=1vgARjj-FPMI-oe1bqlyvV3EhDWMU83QI" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Dr.Mazad Zaveri</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;13th February, 2020</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a >Logisim Workshop</a>
+                            <p>The main objective for this workshop was to bring to the attention of students the importance of learning LogiSim. 
+                                Main advantage of learning LogiSim includes studying the behavior of a system without building it in reality 
+                                using different components. Also the results are accurate in general which helps us in forming a general 
+                                idea about the circuit. The interface itself is very intuitive and the use of color-coding of wires and elements 
+                                allows for easy analysis and testing of circuits. the completed file can be saved as an image, or as a .circ file. 
+                                Included circuit components include inputs and outputs, gates, multiplexers, arithmetic circuits, flip-flops, 
+                                and RAM memory.
+
+                            </p>
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                
+                </div>
+                <aside class="sidebar">
+                    
+                    <div class="popular-post">
+                        <h2>Upcoming Events</h2>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-1.jpg'%}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a >New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-2.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a >New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-3.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a >New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="500">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-4.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a >New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-5.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a >New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Newsletter</h2>
+                        <div class="form-element">
+                            <input type="text" class="input-element" placeholder="Email">
+                            <button class="btn form-btn">Subscribe</button>
+                        </div>
+                    </div>
+                 
+                </aside>
+            </div>
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>IEEE, an association dedicated to advancing innovation and technological excellence for the benefit of humanity, 
+                    is the world's largest technical professional society. 
+                    It is designed to serve professionals involved in all aspects of the electrical, 
+                    electronic, and computing fields and related areas of science and technology that underlie modern civilization.</p>
+            </div>
+            
+           
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+{% extends "Blog/base.html" %}
+
+{% block title %} Quantum Cryptography {% endblock %}
+
+{% block cover_image %} 
+<img src="https://drive.google.com/uc?export=view&id=1Lego0perkAqmY7DdOiWBfFYPbDFqkT0Y" class="img" alt="blog1" />
+{% endblock %}
+
+{% block author %} Ishan Mistry {% endblock %}
+
+{% block date %} 21st March, 2021 {% endblock %}
+
+{% block heading %}
+Quantum Cryptography
+<style>
+    h2 {
+        color: azure;
+    }
+
+    p {
+        color: azure;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<p>
+Let’s begin by playing two truths and a lie...
+</p>
+<p>
+<b>Number 1:-</b> Remember Christopher, the Enigma codebreaking machine from ‘The imitation game’? What if I were to tell you that we are not that farfetched from such technology that can literally crack ANY code?
+</p>
+<p>
+The current encryption, on a laymen level, can be understood as a naïve lock and key setup that we use. Let's suppose you're the pizza guy: angels in uniforms, one reason - one word - pizza. Let's suppose I want to make a secret special pizza order to you (the reader). I can’t simply send it to you as there’s this one friend of mine who is crazy for pizza and can easily see or manipulate the message by adding his weird toppings. And so, I need to send it to you in some scrambled form. And here comes the role of the lock. The special lock that we have can scramble the information into some unreadable form and the reader i.e. you must have the key to unscramble that message and hence read it.
+</p>
+<p>
+Analogous to the real-life scenario the key intended for a particular lock can only unlock its respective lock. The communication between you and me can be thought of as us standing apart at the end of a tunnel and the eavesdropper lies somewhere in the middle, spying in the dark. I cannot directly send you the key as the eavesdropper can also have the same copy of the key and hence, he then will also be able to unscramble all of the messages. So what we tend to do is make a PUBLIC lock that is distributed to everyone (and so DOES the eavesdropper) The sole task of the public lock is to encode messages, (and it cannot decode any of the messages) only the receiver i.e., you should have the Super-Secret key to this public lock and hence will be used to unlock the messages to be communicated.
+</p>
+<p>
+<b>Case 1:</b> If I want to send you a message:
+</p>
+<p>
+Easy, I’ll use my Public lock and scramble the message and send it to you through the channel as assuming only you are the one in the whole world with the key hence only you will be able to unscramble the message.
+</p>
+<p>
+Even if the eavesdropper gets a copy of your scrambled message, he can do nothing as
+</p>
+<p>
+1). The obvious one he does not have the key.
+</p>
+<p>
+2). Second the public lock that was publicly distributed can be used ONLY to scramble and not unscramble the messages.
+</p>
+<p>
+<b>Case 2:</b> What if you want to send me a message?
+</p>
+<p>
+Currently, even if sender sends you messages, you won’t be able to unscramble any messages as you just have the public lock.... that can unscramble information
+<p>
+</p>
+<p>
+So, I now need to come up with something...
+</p>
+<p>
+So, I make my own little shiny private key that I will use to scramble and unscramble messages and I make sure to scramble the copy of this key by using the Public lock before sending it to you. Once you have my scrambled key, you can use your Super-Secret key to unscramble it and guess what? We’ve established a secure connection!
+</p>
+<p>
+<b>Case 3:</b> What if the eavesdropper cracks i.e guesses the key to the public lock? Problem: As we are freely distributing the public lock over the channel, hence, the eavesdropper can easily get a copy of the key to this public lock. Practically it would take him a lot of time to go through all the possible sets of public key combinations. But it’s possible; I’d say ‘Beware’ if you feel you’re astronomically unlucky
+</p>
+<p>
+<b>Solution:</b> We will keep on changing the keys that I sent you (in the second case), so even if he finds out the key, he won’t be able to access anything later on. It’s too late already.... that the message has been well received. The pizza box would already be empty and ‘my precious’, I meant ‘my pizza’ would be all mine by the time he finds it (which he really won’t).
+</p>
+<p>
+MISSION ACCOMPLISHED.
+</p>
+<br><br>
+<img src="https://drive.google.com/uc?export=view&id=1Iqf1o6ErcN7OSusqZjJLgSfUe1G-DPYR" alt="blog1" />
+<br><br>
+<p>
+Figure i - It isn’t some crazy rich chandelier in a crazy rich palace, this is the very quantum computer we are talking about. The qubits are stored at very low temperatures as in -460 degrees Fahrenheit and hence arises the need of huge cooling structures.
+</p>
+<p>
+Don’t be shy you can surely give yourself a good pat for this because you know the basics of the working of the keys and locks are nothing but functions that convert the given message into an encoded or encrypted form that is not readable without changing it back to the original message.
+</p>
+<p>
+These keys are basically nothing but large sequences of 1’s and 0’s made up of 32 bits or characters. Hence, if the eavesdropper wants to guess the key value then he has to go through 232 (around 4294967296) combinations until he finds the key. It clearly is a very tedious task and hence makes it safer and safer unless you are astronomically unlucky but......Quantum Computers! With the help of the Quantum Computer, this process of going through all the 4294967296 combinations can be done in polynomial time and hence your key can easily be guessed by the eavesdropper! But don’t worry the advent of the quantum computing is a double-edged sword, we can use quantum to fight back quantum! To summarize I have a personal lock and a personal key pair and also a public lock that has been distributed to everyone. The main trick is that I first use my personal lock to scramble and transmit all the messages, but in order to unscramble the messages the receiver must have my personal key, so now I make use of the public lock and scramble my public key itself and send it as the part of the information that is to be sent.
+</p>
+<p>
+So that the sender also has the personal key and he and only he will be able to unscramble the messages.
+</p>
+<p>
+<b>Number 2:-</b> The era will now be where we will see people saying “Distance is just a number”. The term teleportation is no longer just a vague idea that remains a figment of imagination in the mind of a seven year-old or something that the creators of the Star Trek series were not aware of back then.
+</p>
+<p>
+The concept of entanglement prevails in the quantum realm where two bits (quantum bits) are made to point to the same state and change in either one of the qubits Imagine two qubits, one in India and one in Canada. Let the Canadian qubit stand for ‘C’, and the Indian qubit ‘I’. When qubit ‘C’ is measured as being a ‘1’, then qubit “C” in Canada instantaneously collapses in correspondence with how the qubits were put into entanglement i.e. you can predict its behavior I.e. a ‘1’ or a ‘0’.
+</p>
+<br><br>
+<img src="https://drive.google.com/uc?export=view&id=18_45VvUZKwQEUye6BYuzZoY0lXPZRh45" alt="blog1" />
+<br><br>
+<p>
+This is true no matter how far away the qubits are. This is literal teleportation of the bits; you may argue that in the present state too can be instant communication, but the current instant communication is the result of the high and efficient underlying computer network architecture, without this, there cannot be any sort of communication.
+</p>
+<p>
+To be honest this is sad teleportation because literal teleportation involves sending you to some other place (Starbucks from home huh?), which is a better way of saying that firstly all your particles are destroyed at one end, which is a sugar-coated way of saying “You die” and those particles are then used to create the new you at the other end (The Resurrection stone?) that just thinks “It’s you again”. Sounds fancy isn’t it!
+</p>
+<p>
+This is kind of obvious because you cannot have two of ‘yous’ in the same world. That’d be so cool but yeah not possible! But when we look closely quantum teleportation does teleport or rather send the information about the state of the qubits with ease. And that’s all we need...you are made up of matter, matter has atoms, atoms have electrons and if somehow, we can teleport all this information of ‘you’ being ‘you’ at the atomic level, we can recreate a new ‘you’. That's just a way of bringing in a picture of what it actually is. You must be thinking what about the clone left on the other end?
+</p>
+<br><br>
+<img src="https://drive.google.com/uc?export=view&id=14_lrTO-w_fqJCgNUb8_onNdaK9jwXH1Y" alt="blog1" />
+<br><br>
+<p>
+<i><b>Quantum mechanics to the rescue:</b></i> Quantum mechanics has this theorem known as the nocloning theorem which states that” It is impossible to create an identical copy of an arbitrary unknown quantum state.”(In this example the information of atoms of ‘you’)
+</p>
+<p>
+<b>Number 3:-</b> Your Spicy Italian sub fell down the road, crushed by a car! Not a problem (reviving sounds of the time machine turning on...) give me a sec and I'll be back in no time with your sub...
+</p>
+<p>
+.
+<br>
+.
+<br>
+BUMMER ALERT
+<br>
+.
+<br>
+.
+</p>
+<br><br>
+<img src="https://drive.google.com/uc?export=view&id=1K0tTE3Kt4OeJ4NKrqS1sXujBVWi1woMk" alt="blog1" />
+<br><br>
+<p>
+In the end, I would just say thoughts and prayers for that sub… Don’t tell me you believed the time machine thing! You should be sure that we can never build a time machine. Let's assume we build a time machine in the future. The very first thing that I can come up with to do with the time machine is to go back to the past and give the time machine to myself so that I never have to actually make it!
+</p>
+<p>
+Hence, we all collectively conclude that the Number 3 is a lie and the other two are truths.
+</p>
+<br><br>
+<img src="https://drive.google.com/uc?export=view&id=1ArUTwbXA4pnVUrsXxnAfZPKxOFHN5a68" alt="blog1" />
+<br><br>
+<p>
+Quantum computing’s purpose is to aid and extend the abilities of classical computing. Quantum computers will perform certain tasks much more efficiently than classical computers, opening for a wide area of application, providing us with a new tool for specific applications. This isn't some revolt but is surely an uprising. Quantum computers will not replace their classical counterparts. In fact, quantum computers require classical computers to support their specialized abilities. But we have a lot of waiting to do before we see quantum computers in our laps and labs.
+</p>
+{% endblock %}

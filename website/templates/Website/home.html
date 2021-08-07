@@ -1,0 +1,679 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEEE PDEU</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/butler"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/rolly.js@0.2.1/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <style>
+
+
+    .sec3{
+      margin-bottom: 50px;
+    }
+
+      .banner {
+        height: 100vh;
+        background: url("{% static 'images/banner.jpg' %}") no-repeat;
+        background-size: cover;
+        background-position: top;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .imgbox {
+        display: grid;
+        height: 100%;
+      }
+
+      .center-fit {
+        max-width: 100vw;
+        max-height: 20vh;
+        margin: auto;
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        padding: 3px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.774);
+      }
+
+      .responsive {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      /* ----------------------------------------------------------- */
+
+      img,
+      .btn {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (min-device-width: 600px) {
+        img[data-src-600px] {
+          content: attr(data-src-600px, url);
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .container > img {
+        display: flex;
+        align-items: center;
+      }
+      .container > .text-inner {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (max-device-width: 600px) {
+        .banner h1 {
+          font-size: 300%;
+          line-height: 2.2rem;
+
+        }
+
+        .text > .btn {
+          line-height: 40px;
+          width: 40%;
+        }
+
+        .container {
+          max-width: 100%;
+          display: block;
+
+          text-align: right;
+          font-size: 80%;
+          margin: auto;
+          justify-content: center;
+        }
+
+        .sec1-inner .text-left h3 {
+          font-size: 110% !important;
+          font-weight: 500;
+          line-height:1rem;
+        }
+
+        .sec1-inner .text-right p {
+          font-size: 100%;
+          line-height:1rem
+        }
+
+        .text-inner {
+          width: 100%;
+          display: absolute;
+          left: -54%;
+        }
+
+        .sec2 .text-inner:before {
+          display: none;
+        }
+        .aum {
+          display: none;
+        }
+        .psuedo {
+          display: inherit !important;
+        }
+        .psuedo .text-inner {
+          width: 100%;
+          display: absolute;
+          justify-content: center;
+          text-align: left;
+          left: -34%;
+        }
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+        .slick-arrow {
+          position: absolute;
+          top: -52%;
+          left: 50%;
+        }
+        .slick-prev {
+          position: absolute;
+          top: -52%;
+          left: 24%;
+        }
+        .sec3-inner > h3 {
+          width: 100% !important;
+          margin: 0;
+          text-align: center;
+          display: block !important;
+        }
+
+        .copyright p {
+          text-align: center;
+        }
+        .header {
+          display: block !important;
+        }
+        .responsive {
+          display: none;
+        }
+        footer .col{
+          text-align: left;
+        }
+      }
+
+      .psuedo {
+        display: none;
+      }
+
+      .header {
+        display: none;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+
+      .header {
+        width: 100%;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 0;
+      }
+
+      .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background-color: #000;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+      }
+
+      .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-item {
+        margin-left: 5rem;
+      }
+
+      .nav-link {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #475569;
+      }
+
+      .nav-link:hover {
+        color: #482ff7;
+      }
+
+      .nav-logo {
+        font-size: 2.1rem;
+        font-weight: 500;
+        color: #482ff7;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 5rem;
+          flex-direction: column;
+          background-color: #000;
+          width: 100%;
+          border-radius: 10px;
+          text-align: center;
+          transition: 0.3s;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-logo > img {
+          justify-content: left;
+          height: 80px;
+        }
+
+        .nav-menu.active {
+          left: 0;
+        }
+
+        .nav-item {
+          margin: 2.5rem 0;
+        }
+
+        .hamburger {
+          display: block;
+          cursor: pointer;
+        }
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    </style>
+
+    <main class="app">
+      <header class="header">
+        <nav class="navbar">
+          <a href="#" class="nav-logo">
+            <img src="{% static 'images/logo.svg' %}" alt=""
+          /></a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Events</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+
+      <div class="responsive">
+        <header data-aos="fade-up">
+          <div class="left-menu">
+            <ul>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'Blog Home' %}">Blogs</a></li>
+              <li><a href="{% url 'Contact' %}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <img src="{% static 'images/logo.svg' %}" alt="" />
+          </div>
+          <div class="right-menu">
+            <ul>
+              <li><a href="{% url 'events' %}">Events</a></li>
+              <li><a href="{% url 'team' %}">Team</a></li>
+              <li><a href="{% url 'About' %}">About</a></li>
+            </ul>
+          </div>
+        </header>
+      </div>
+
+      <section class="banner" data-scene>
+        <div class="container">
+          <div class="text" data-aos="zoom-out" data-aos-delay="1000">
+            <h1>
+              Changing The World<br />
+              One Invention At A Time
+            </h1>
+            <p>
+              Welcome to the <br />IEEE PDEU Student Chapter
+            </p>
+            <a href="{% url 'About' %}" class="btn">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo" data-scene>
+        <div class="imgbox">
+          <img
+            class="center-fit"
+            src="https://drive.google.com/uc?export=view&id=1xVy94jRWmG9avuyQGtxFs5LHzeLmlVOL"
+          />
+        </div>
+      </section>
+
+      <section class="sec1" data-scene>
+        <div class="container">
+          <div class="sec1-inner">
+            <div class="text text-left" data-aos="zoom-out-right">
+              <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis quia quibusdam sint.
+              </h3>
+            </div>
+            <div class="text text-right" data-aos="zoom-out-left">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                cum libero dolorum eius delectus provident aut ullam,
+                voluptatibus assumenda veritatis distinctio. Error, ex? Id,
+                impedit?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <!-- -------------------------------------------------- -->
+
+       <section class="sec2 left-right-sec psuedo" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="img" data-aos="zoom-out-up">
+              <div class="img">
+                <img src="{% static 'images/img2.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="text" data-aos="zoom-out-left">
+              <h2>Faculty Advisor</h2>
+              <div class="text-inner">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis a enim tempora aliquam, sed architecto commodi
+                  obcaecati nostrum voluptates odit.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec2FA left-right-sec aum" data-scene>
+        <div class="container">
+          <div class="sec2FA-inner">
+            <div class="text" data-aos="zoom-out-right">
+              <h2 style="position: relative;left: 25.5rem; display: flex;">Faculty Advisor</h2>
+              <div class="text-inner">
+                <p style="text-align: right;position: relative; right: 9.1rem;">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis a enim tempora aliquam, sed architecto commodi
+                  obcaecati nostrum voluptates odit.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+            <div class="img" data-aos="zoom-out-left">
+              <div class="img">
+                <img src="{% static 'images/img2.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- -->
+
+
+      <section class="sec2 left-right-sec P" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="img" data-aos="zoom-out-up">
+              <div class="img">
+                <img src="{% static 'images/img2.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="text" data-aos="zoom-out-left">
+              <h2 style="position: relative;left: 1.5rem; display: flex;">President</h2>
+              <div class="text-inner">
+                <p style="text-align: left;position: relative; left: 12rem">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis a enim tempora aliquam, sed architecto commodi
+                  obcaecati nostrum voluptates odit.
+                </p>
+                <a  href="#" class="btn" style="text-align: center;position: relative; left: 3rem">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------- -->
+
+      <section class="sec2 left-right-sec psuedo" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="img" data-aos="zoom-out-up">
+              <div class="img">
+                <img src="{% static 'images/img2.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="text" data-aos="zoom-out-left">
+              <h2>Vice-President</h2>
+              <div class="text-inner">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis a enim tempora aliquam, sed architecto commodi
+                  obcaecati nostrum voluptates odit.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- -->
+
+      <section class="sec2 left-right-sec aum" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="text" data-aos="zoom-out-right">
+              <h2>Vice President</h2>
+              <div class="text-inner">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis a enim tempora aliquam, sed architecto commodi
+                  obcaecati nostrum voluptates odit.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+            <div class="img" data-aos="zoom-out-left">
+              <div class="img">
+                <img src="{% static 'images/img2.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec2 left-right-sec" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="img" data-aos="zoom-out-up">
+              <div class="img">
+                <img src="{% static 'images/img2.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="text" data-aos="zoom-out-left">
+              <h2>Treasurer</h2>
+              <div class="text-inner">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis a enim tempora aliquam, sed architecto commodi
+                  obcaecati nostrum voluptates odit.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec3" data-scene>
+        <div class="container">
+          <div class="sec3-inner" data-aos="zoom-out-left">
+            <h3>Event Pictures</h3>
+            <div class="sec3-slider">
+              <div class="item">
+                <img src="{% static 'images/slide1.jpg' %}" alt="" />
+              </div>
+              <div class="item">
+                <img src="{% static 'images/slide2.jpg' %}" alt="" />
+              </div>
+              <div class="item">
+                <img src="{% static 'images/slide3.jpg' %}" alt="" />
+              </div>
+              <div class="item">
+                <img src="{% static 'images/slide1.jpg' %}" alt="" />
+              </div>
+              <div class="item">
+                <img src="{% static 'images/slide2.jpg' %}" alt="" />
+              </div>
+              <div class="item">
+                <img src="{% static 'images/slide3.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+
+      <footer data-scene>
+        <div class="container">
+          <div class="footer-inner" data-aos="zoom-out-up">
+            <div class="col">
+              <img src="{% static 'images/logo.svg' %}" alt="" />
+            </div>
+            <div class="col">
+              <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'About' %}">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><a href="{% url 'Blog Home' %}">Blogs</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'creators' %}">Creators</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="copyright" data-scene>
+        <div class="container" data-aos="zoom-out-up" data-aos-offset="0">
+          <p>© 2021 IEEE | All Rights Reserved</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      $(".sec3-slider").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        speed: 1500,
+      });
+
+      const r = rolly({
+        view: document.querySelector(".app"),
+        native: true,
+        // other options
+      });
+      r.init();
+
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>

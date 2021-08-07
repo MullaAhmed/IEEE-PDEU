@@ -1,0 +1,514 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    main .site-title {
+        background: url("{% static 'images/Background-image.jpg' %}");
+        background-size: cover;
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    main .blog {
+        background: url("{% static 'images/Abract01.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100vh;
+        width: 100%;
+        background-size: 65%;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'Blog Home' %}" class="text-gray">Blog</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}">
+                        <li class="nav-link">
+                            Home
+                        </li>
+                    </a>
+                    <a href="{% url 'About' %}">
+                        <li class="nav-link">
+                            About
+                        </li>
+                    </a>
+
+                    <a href="{% url 'events' %}">
+                        <li class="nav-link">
+                            Events
+                        </li>
+                    </a>
+                    <a href="{% url 'Contact' %}">
+                        <li class="nav-link">
+                            Contact Us
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                <img src="{% static 'images/logo.svg' %}" alt="" />
+                <h2>Blog Section</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Optio ipsa ex fugit assumenda cupiditate
+                    dolores eius quos qui impedit. Iure nam similique doloremque minima molestiae.</p>
+            </div>
+        </section>
+
+        <!------------x----------- Site Title ----------x----------->
+
+        <!-- --------------------- Blog Carousel ----------------- -->
+
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-1.jpg'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>London Fashion week's continued the evolution</h3>
+                                <button class="btn btn-blog">Fashion</button>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-3.jpg'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>London Fashion week's continued the evolution</h3>
+                                <button class="btn btn-blog">Fashion</button>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-2.jpg'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>London Fashion week's continued the evolution</h3>
+                                <button class="btn btn-blog">Fashion</button>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="{% static 'images/Blog-post/post-5.png'%}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>London Fashion week's continued the evolution</h3>
+                                <button class="btn btn-blog">Fashion</button>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------x---------- Blog Carousel --------x-------- -->
+
+        <!-- ---------------------- Site Content -------------------------->
+
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=10JTgXWjjiDxhS0-JgKhzohy2R2I3cTIh" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Karthik Ramesh</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;20th April, 2021</span>
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">The end of Moore’s law and the future alternative to traditional computing</a>
+                            <p>A few years ago, every new generation of processors always offered a pretty significant jump in processing power.
+                                Nowadays every successor is akin to its predecessor.
+                                To illustrate the above point, let’s take a look at Moore’s law. The term ‘Law’ seems to grow weaker as the years
+                                grow by, but the statement given by Gordon Moore predicts the exponential growth of computing power. Back in 1965,
+                                Gordon Moore, co-founder of Intel, observed that the number of transistors on a one-inch computer chip double every
+                                year, while the costs halve.
+                            </p>
+                            <a href="{% url 'page1' %}">
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ----------------------------------------------------------------------------------------------- -->
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=1-OKmqTX5H1EvscDjmO0N3Qrzpf4A-3nS" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Abhishek Rawal</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;10th April, 2021</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">Internet of Things (IoT) "Making Things Think"</a>
+                            <p>Internet of Things (IoT) the name itself describes millions of devices that are mutually connected and sharing data.
+                                It has served many purposes in the past, present and will play a prominent role in the upcoming industrial
+                                revolution. It is a network that binds the physical world to the digital world.
+                            </p>
+                            <a href="{% url 'page2' %}">
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=19S3IDKr0hNmx3ZO4U00cLJ4zmnzQJArG" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Karthik Ramesh</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;21st March, 2021</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">Unmanned Systems in Information Warfare</a>
+                            <p>You might have used or at least thought of using a drone to take epic vacation shots or to make super cool videos,
+                                but what if I tell you to think big? What if I tell you that a drone can change the way people and goods are
+                                transported? And at this point in time, take your thinking caps on and think of an era where we don’t need roads to
+                                travel! What if I tell you the design philosophy YOU should be using for YOUR drone projects?
+                            </p>
+                            <a href="{% url 'page3' %}">
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ----------------------------------------------------------------------------------------------- -->
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=12IdI-ws0N7YJgEfdL7P2ka4ykrRkcaN5" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Karthik Ramesh</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;21st March, 2021</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">Regenerative Braking: Theory and application</a>
+                            <p>
+                                Mankind has been at the art of mastering transportation for over half a millennium now. 
+                                The problem with all was that the machines necessary to provide the mechanical energy to move 
+                                them were massive and required high maintenance. Since transportation was a necessity, 
+                                mankind needed to further simplify it and the solution was found in the internal combustion 
+                                engines that were commercially viable developed by Nikolaus Otto and Étienne Lenoir. 
+                                They proved to be cheaper and required less maintenance and running costs. 
+                                So in 1885 Karl Benz designed his own engine and launched it in his Motorwagen in Germany, 
+                                it is regarded as the first practical automobile powered by an IC engine. 
+                                But still, the cost of his vehicle units was very high and this challenge was taken up 
+                                by Henry Ford, who in 1908 created the Ford Model T and mass-manufactured it and this was 
+                                all that was needed to make the automobile industry seem viable and sustainable.
+
+
+                            </p>
+                            <a href="{% url 'page4' %}">
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- ----------------------------------------------------------------------------------------------- -->
+                     <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="https://drive.google.com/uc?export=view&id=1Lego0perkAqmY7DdOiWBfFYPbDFqkT0Y" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Ishan Mistry</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;21st March, 2021</span>
+                                
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">Quantum Cryptography</a>
+                            <p>Let’s begin by playing two truths and a lie...<br>
+
+                                Number 1:- Remember Christopher, the Enigma codebreaking machine from ‘The imitation game’? <br>
+                                What if I were to tell you that we are not that farfetched from such technology that can literally crack ANY code?<br>
+                                
+                                The current encryption, on a laymen level, can be understood as a naïve lock and key setup that we use. 
+                                Let's suppose you're the pizza guy: angels in uniforms, one reason - one word - pizza. Let's suppose I want to 
+                                make a secret special pizza order to you (the reader). I can’t simply send it to you as there’s this one friend of 
+                                mine who is crazy for pizza and can easily see or manipulate the message by adding his weird toppings. And so, 
+                                I need to send it to you in some scrambled form. And here comes the role of the lock. The special lock that we have 
+                                can scramble the information into some unreadable form and the reader 
+                                i.e. you must have the key to unscramble that message and hence read it.
+                            </p>
+                            <a href="{% url 'page5' %}">
+                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                   <!-- <div class="pagination flex-row">
+                        <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="pages">1</a>
+                        <a href="#" class="pages">2</a>
+                        <a href="#" class="pages">3</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                -->
+                </div>
+                <aside class="sidebar">
+                    <div class="category">
+                        <h2>Category</h2>
+                        <ul class="category-list">
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                                <a href="#">Software</a>
+                                <span>(05)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <a href="#">Techonlogy</a>
+                                <span>(02)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                                <a href="#">Lifestyle</a>
+                                <span>(07)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                                <a href="#">Shopping</a>
+                                <span>(01)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="#">Food</a>
+                                <span>(08)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popular-post">
+                        <h2>Popular Post</h2>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-1.jpg'%}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-2.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-3.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="500">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-4.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-5.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                    </div>
+
+                  <!--  <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Newsletter</h2>
+                        <div class="form-element">
+                            <input type="text" class="input-element" placeholder="Email">
+                            <button class="btn form-btn">Subscribe</button>
+                        </div>
+                    </div>
+                -->
+
+                </aside>
+            </div>
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>IEEE, an association dedicated to advancing innovation and technological excellence for the benefit
+                    of humanity, is the world's largest technical professional society.
+                    It is designed to serve professionals involved in all aspects of the electrical,
+                    electronic, and computing fields and related areas of science and technology that underlie modern
+                    civilization.
+                </p>
+            </div>
+        <!--    
+            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                <h2>Newsletter</h2>
+                <p>Stay update with our latest</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+        -->
+        <!--
+            <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                    <img src="{% static 'images/instagram/thumb-card3.png' %}" alt="insta1">
+                    <img src="{% static 'images/instagram/thumb-card4.png' %}" alt="insta2">
+                    <img src="{% static 'images/instagram/thumb-card5.png' %}" alt="insta3">
+                </div>
+                <div class="flex-row">
+                    <img src="{% static 'images/instagram/thumb-card6.png' %}" alt="insta4">
+                    <img src="{% static 'images/instagram/thumb-card7.png' %}" alt="insta5">
+                    <img src="{% static 'images/instagram/thumb-card8.png' %}" alt="insta6">
+                </div>
+            </div>
+        -->
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

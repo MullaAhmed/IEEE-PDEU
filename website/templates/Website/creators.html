@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    main .site-title{
+    background: url( "{% static 'images/Background-image.jpg' %}");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+main .blog{
+    background: url("{% static 'images/Abract01.png' %}");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+section {
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(20% at right 70%);
+}
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+}
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.container .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.container .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.container .card .content .imgBx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.container .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .card .content .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+.container .card .content .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.container .card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+.container .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+}
+.container .card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.container .card .sci li a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.about{
+    color: #fff;
+    margin: 30px;
+} 
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous"
+  />
+  
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'About' %}" class="text-gray">About</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}"><li class="nav-link">
+                        Home
+                    </li></a>
+                    <a href="{% url 'Blog Home' %}"><li class="nav-link">
+                        Blog
+                    </li></a>
+
+                     <a href="{% url 'events' %}"><li class="nav-link">
+                       Events
+                    </li></a>
+                    <a href="#">  <li class="nav-link">
+                       Contact Us
+                    </li></a>              
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <main>
+        <!-- -----------x---------- Site Content -------------x------------>
+        
+
+        <section>
+            <div class="container">
+             
+      
+              <div class="card">
+                <div class="content">
+                  <div class="imgBx"><img src="{% static 'images/img.jpg' %}" alt="" /></div>
+                  <div class="contentBx">
+                    <h3>Virat Kholi<br /><span>Captain</span></h3>
+                  </div>
+                </div>
+                <ul class="sci">
+                  <li style="--i: 1">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <div class="content">
+                  <div class="imgBx"><img src="{% static 'images/img.jpg' %}" alt="" /></div>
+                  <div class="contentBx">
+                    <h3>Virat Kohli<br /><span>Captain</span></h3>
+                  </div>
+                </div>
+                <ul class="sci">
+                  <li style="--i: 1">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+      
+          
+            <div class="about">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores officiis, quam aspernatur consectetur fuga iusto, dignissimos similique tempora, dolorum odit exercitationem veritatis quidem inventore. Excepturi rem, illum libero deserunt explicabo amet ipsam vero deleniti voluptates molestiae maxime laboriosam facilis quidem saepe reprehenderit maiores. Harum placeat voluptates sequi? Illo dolores, obcaecati, rem numquam officia consequuntur illum quos libero molestiae dolorum maxime quaerat veniam delectus assumenda at voluptatem odit ducimus, explicabo odio necessitatibus voluptas! Aspernatur iste, sint praesentium nisi quam totam beatae, itaque quibusdam suscipit pariatur quos voluptatem illo. Labore maiores recusandae nobis nam ea maxime culpa voluptatum aliquid. Velit, architecto?</p>
+            </div>
+            
+    </main>
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                    iure, autem nulla tenetur repellendus.</p>
+            </div>
+            
+           
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

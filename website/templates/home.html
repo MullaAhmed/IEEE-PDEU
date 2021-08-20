@@ -307,9 +307,11 @@
 
     <main class="app">
         <header class="header">
-            <nav class="navbar">
+            <nav class="navbar" style="padding-bottom: 3rem;">
+              
                 <a href="{% url 'home' %}" class="nav-logo">
-                    <img src="{% static 'images/logo.svg' %}"  alt="" /></a>
+                    <img src="{% static 'images/logo.svg' %}"  style="position: absolute; top:20%; left:5% "  alt="" /></a>
+                    
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="{% url 'Blog Home1' %}" class="nav-link">Blogs</a>
@@ -327,7 +329,7 @@
                         <a href="{% url 'About' %}" class="nav-link">About</a>
                     </li>
                 </ul>
-                <div class="hamburger">
+                <div class="hamburger" style="padding-top: 1.7rem;" >
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>

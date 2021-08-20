@@ -1,0 +1,447 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    main .site-title {
+        background: url("{% static 'images/Background-image.jpg' %}");
+        background-size: cover;
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    main .blog {
+        background: url("{% static 'images/Abract01.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100vh;
+        width: 100%;
+        background-size: 65%;
+    }
+  
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'Blog Home1' %}" class="text-gray">Blog</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}">
+                        <li class="nav-link">
+                            Home
+                        </li>
+                    </a>
+                    <a href="{% url 'About' %}">
+                        <li class="nav-link">
+                            About
+                        </li>
+                    </a>
+
+                    <a href="{% url 'events' %}">
+                        <li class="nav-link">
+                            Events
+                        </li>
+                    </a>
+                    <a href="{% url 'team' %}">
+                        <li class="nav-link">
+                            Team
+                        </li>
+                    </a>
+                    <a href="{% url 'Contact' %}">
+                        <li class="nav-link">
+                            Contact Us
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                <img src="{% static 'images/logo.svg' %}" alt="" />
+                <h2>Blog Section</h2>
+
+                <p>
+                    “The greatest part of a writer’s time is spent in reading, in order to write;<br> 
+                    a man will turn over half a library to make one book.”<br>
+—Samuel Johnson
+                </p>
+            </div>
+        </section>
+
+        <!------------x----------- Site Title ----------x----------->
+
+        <!-- --------------------- Blog Carousel ----------------- -->
+
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=1jk_PvkPS_3CXmk2nQGSumM-FcdaWB4tA" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Zomato IPO</h3>
+                               <a href="https://www.instagram.com/p/CRX9G-3AQwm/?utm_source=ig_web_copy_link" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=1cgA1tOHMkWAWhWSMqZq2pL4J1aIxc8-E" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Company Acquisitions</h3>
+                               <a href="https://www.instagram.com/p/CRfwWEwg3D6/?utm_source=ig_web_copy_link" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=1QpXCh0Tvxv2T9K8pcnxNpYnHexHLfGCD" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Life Beyond Earth</h3>
+                               <a href="https://www.instagram.com/p/CRoPY8kAefh/?utm_source=ig_web_copy_link" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=17viQ0i3k2FN6DKaBKUOPxDAwBLxqP7Kr" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Mars Orbital Mission</h3>
+                               <a href="https://www.instagram.com/p/CRvUvZngAlP/?utm_source=ig_web_copy_link" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=1ZURRmGqZRgBdTV0_A773JtEY2aQYlMzS" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Shared Platforms</h3>
+                               <a href="https://www.instagram.com/p/CSl9vA0AitN/?utm_medium=share_sheet" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=1A1ecCPSACTdepvp99daIErQyrgtruH1n" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Digital Privacy</h3>
+                               <a href="https://www.instagram.com/p/CR3IBAngKgl/?utm_source=ig_web_copy_link" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="https://drive.google.com/uc?export=view&id=1Y32RiXIgDflenMyyFHda-M_07EVotwSp" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Double Reduction Policy</h3>
+                               <a href="https://www.instagram.com/p/CR3IBAngKgl/?utm_source=ig_web_copy_link" target="blank">
+                                <button class="btn btn-blog">Read More</button>
+                               </a>
+                                
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------x---------- Blog Carousel --------x-------- -->
+
+        <!-- ---------------------- Site Content -------------------------->
+
+        <section class="container">
+            <div class="site-content">
+             <div class="posts">
+                 {% block content %}
+      
+
+                    {% endblock %}
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div class="pagination flex-row">
+                        <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        <a href="{% url 'Blog Home1' %}" class="pages">1</a>
+                        <a href="{% url 'Blog Home2' %}" class="pages">2</a>
+                        
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                
+                </div>
+                <aside class="sidebar">
+                    <!--
+                    <div class="category">
+                        <h2>Category</h2>
+                        <ul class="category-list">
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                                <a href="#">Software</a>
+                                <span>(05)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <a href="#">Techonlogy</a>
+                                <span>(02)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                                <a href="#">Lifestyle</a>
+                                <span>(07)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                                <a href="#">Shopping</a>
+                                <span>(01)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="#">Food</a>
+                                <span>(08)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    -->
+                    <div class="popular-post">
+                        <h2>Kaleidoscope Issues</h2>
+
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                            
+                            <div class="post-image">
+                                <a href="https://online.fliphtml5.com/cikrg/uftx/" target="blank">
+                                <div>
+                                    <img src="https://drive.google.com/uc?export=view&id=15Rn-qA_mY57U5g7WccEwg7Qo9y7iqJEh" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span style="color:black;"><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;August 8,
+                                        2021</span>                                    
+                                </div> 
+                            </a>                               
+                            </div>
+                        
+                            <div class="post-title">
+                                <a href="https://online.fliphtml5.com/cikrg/uftx/" target="blank">Issue 1</a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <a href="https://online.fliphtml5.com/rtbwz/hgkk/#p=1" target="blank">
+                                <div>
+                                    <img src="https://drive.google.com/uc?export=view&id=1fwQhSq7lNIXxBP_JmYWOgnxSowet1iaV" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span   style="color:black;"><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp; 2019-2021 </span>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="post-title">
+                                <a href="https://online.fliphtml5.com/rtbwz/hgkk/#p=1" target="blank">
+                                    Annual Issue (2019-2021)</a>
+                            </div>
+                        </div>
+
+                    <!--
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-3.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="500">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-4.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/popular-post/m-blog-5.jpg' %}" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2019</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                    </div>
+                -->
+
+                  <!--  <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Newsletter</h2>
+                        <div class="form-element">
+                            <input type="text" class="input-element" placeholder="Email">
+                            <button class="btn form-btn">Subscribe</button>
+                        </div>
+                    </div>
+                -->
+
+                </aside>
+            </div>
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p style="text-align:justify;" >IEEE, an association dedicated to advancing innovation and technological excellence for the benefit
+                    of humanity, is the world's largest technical professional society.
+                    It is designed to serve professionals involved in all aspects of the electrical,
+                    electronic, and computing fields and related areas of science and technology that underlie modern
+                    civilization.
+                </p>
+            </div>
+        <!--    
+            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                <h2>Newsletter</h2>
+                <p>Stay update with our latest</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+        -->
+        <!--
+            <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                    <img src="{% static 'images/instagram/thumb-card3.png' %}" alt="insta1">
+                    <img src="{% static 'images/instagram/thumb-card4.png' %}" alt="insta2">
+                    <img src="{% static 'images/instagram/thumb-card5.png' %}" alt="insta3">
+                </div>
+                <div class="flex-row">
+                    <img src="{% static 'images/instagram/thumb-card6.png' %}" alt="insta4">
+                    <img src="{% static 'images/instagram/thumb-card7.png' %}" alt="insta5">
+                    <img src="{% static 'images/instagram/thumb-card8.png' %}" alt="insta6">
+                </div>
+            </div>
+        -->
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

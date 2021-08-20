@@ -1,0 +1,513 @@
+<html>
+
+<head>
+<style>
+  /* Explanation in JS tab */
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+body {
+	margin: 0px;
+}
+
+#text-container {
+	/* Center the text in the viewport. */
+	position: absolute;
+	margin: auto;
+	width: 100vw;
+	height: 80pt;
+	top: 0;
+	bottom: 0;
+	
+	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+	filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 80pt;
+	
+	text-align: center;
+	
+	user-select: none;
+}
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.wave-content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .wave-content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+main .site-title{
+background: url( "");
+background-size: cover;
+height: 110vh;
+display: flex;
+justify-content: center;
+}
+main .blog{
+background: url("");
+background-repeat: no-repeat;
+background-position: right;
+height: 100vh;
+width: 100%;
+background-size: 65%;
+}
+section {
+position: relative;
+}
+section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/*
+background: linear-gradient(#f00, #f0f);
+clip-path: circle(20% at right 70%);
+*/
+}
+section::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/*
+background: linear-gradient(#2196f3, #e91e63);
+clip-path: circle(20% at 10% 10%);
+*/
+}
+.container {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin: 40px 0;
+}
+.container .card {
+position: relative;
+width: 300px;
+height: 400px;
+background: rgba(255, 255, 255, 0.05);
+margin: 20px;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+backdrop-filter: blur(10px);
+}
+.container .card .content {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+opacity: 0.5;
+transition: 0.5s;
+}
+.container .card:hover .content {
+opacity: 1;
+transform: translateY(-20px);
+}
+.container .card .content .imgBx {
+position: relative;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+overflow: hidden;
+border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.container .card .content .imgBx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.container .card .content .contentBx h3 {
+color: #000;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 500;
+font-size: 30px;
+text-align: center;
+margin: 20px 0 10px;
+line-height: 1.1em;
+}
+.container .card .content .contentBx h3 span {
+font-size: 25px;
+font-weight: 300;
+text-transform: initial;
+padding-bottom: 1rem;
+}
+.container .card .sci {
+position: absolute;
+bottom: 50px;
+display: flex;
+}
+.container .card .sci li {
+list-style: none;
+margin: 0 10px;
+transform: translateY(50px);
+transition: 0.5s;
+opacity: 0;
+transition-delay: calc(0.1s * var(--i));
+}
+.container .card:hover .sci li {
+transform: translateY(0px);
+opacity: 1;
+}
+.container .card .sci li a {
+color: #000;
+font-size: 24px;
+}
+
+.about{
+color: #000;
+margin: 30px;
+} 
+</style>
+</style>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+crossorigin="anonymous"
+/>
+</head>
+
+<body>
+<!-- Explanation in JS tab -->
+
+<!-- The two texts -->
+<div id="text-container">
+	<span id="text1"></span>
+	<span id="text2"></span>
+</div>
+
+<!-- The SVG filter used to create the merging effect -->
+<svg id="filters">
+	<defs>
+		<filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
+  <!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<div class="header">
+
+
+
+  <!--Waves Container-->
+  <!--Hey! This is the original version
+of Simple CSS Waves-->
+
+  <div class="header">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+      <section>
+        <div class="container">
+         
+  
+          <div class="card">
+            <div class="content">
+              <div class="imgBx"><img src="{% static 'images/img.jpg' %}" alt="" /></div>
+              <div class="contentBx">
+                <b><h3>Virat Kohli<br /></b><span>Captain</span></h3>
+              </div>
+            </div>
+            <ul class="sci" style="padding-right: 2.9rem;">
+              <li style="--i: 1">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <div class="imgBx"><img src="{% static 'images/img.jpg' %}" alt="" /></div>
+              <div class="contentBx">
+                <h3>Virat Kohli<br /><span>Captain</span></h3>
+              </div>
+            </div>
+            <ul class="sci" style="padding-right: 2.9rem;">
+              <li style="--i: 1">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!--Waves Container-->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+
+  </div>
+  <!--Header ends-->
+
+  <!--Content starts-->
+  <div class="wave-content flex">
+    <p>Created in 2021 |CSE 2024</p>
+  </div>
+  <!--Content ends-->
+</body>
+
+<script>
+  /*
+	This pen cleverly utilizes SVG filters to create a "Morphing Text" effect. Essentially, it layers 2 text elements on top of each other, and blurs them depending on which text element should be more visible. Once the blurring is applied, both texts are fed through a threshold filter together, which produces the "gooey" effect. Check the CSS - Comment the #container rule's filter out to see how the blurring works!
+*/
+
+const elts = {
+	text1: document.getElementById("text1"),
+	text2: document.getElementById("text2")
+};
+
+// The strings to morph between. You can change these to anything you want!
+const texts = [
+	"Why",
+	"is",
+	"this",
+	"so",
+	"satisfying",
+	"to",
+	"watch?"
+];
+
+// Controls the speed of morphing.
+const morphTime = 1;
+const cooldownTime = 0.25;
+
+let textIndex = texts.length - 1;
+let time = new Date();
+let morph = 0;
+let cooldown = cooldownTime;
+
+elts.text1.textContent = texts[textIndex % texts.length];
+elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+function doMorph() {
+	morph -= cooldown;
+	cooldown = 0;
+	
+	let fraction = morph / morphTime;
+	
+	if (fraction > 1) {
+		cooldown = cooldownTime;
+		fraction = 1;
+	}
+	
+	setMorph(fraction);
+}
+
+// A lot of the magic happens here, this is what applies the blur filter to the text.
+function setMorph(fraction) {
+	// fraction = Math.cos(fraction * Math.PI) / -2 + .5;
+	
+	elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+	elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+	
+	fraction = 1 - fraction;
+	elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+	elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+	
+	elts.text1.textContent = texts[textIndex % texts.length];
+	elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+}
+
+function doCooldown() {
+	morph = 0;
+	
+	elts.text2.style.filter = "";
+	elts.text2.style.opacity = "100%";
+	
+	elts.text1.style.filter = "";
+	elts.text1.style.opacity = "0%";
+}
+
+// Animation loop, which is called every frame.
+function animate() {
+	requestAnimationFrame(animate);
+	
+	let newTime = new Date();
+	let shouldIncrementIndex = cooldown > 0;
+	let dt = (newTime - time) / 1000;
+	time = newTime;
+	
+	cooldown -= dt;
+	
+	if (cooldown <= 0) {
+		if (shouldIncrementIndex) {
+			textIndex++;
+		}
+		
+		doMorph();
+	} else {
+		doCooldown();
+	}
+}
+
+// Start the animation.
+animate();
+</script>
+</html>

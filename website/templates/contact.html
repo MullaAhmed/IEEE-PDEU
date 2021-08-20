@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/contact.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+
+    <style>
+      @media (min-device-width: 770px) {
+        div.backBtn {
+          width: 100px;
+        left: 50;
+          background-color: #f4f4f4;
+          transition: all 0.4s ease;
+          position: absolute;
+          cursor: pointer;
+        }
+      }
+      body {
+        background: url("{% static 'images/bg.jpg' %}");
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.637);
+      }
+
+      div.backBtn {
+        width: 100px;
+        top :1rem;
+        left: 1rem;
+        background-color: #f4f4f4;
+        transition: all 0.4s ease;
+        position: absolute;
+        cursor: pointer;
+      }
+
+      span.line {
+        bottom: auto;
+        right: auto;
+        top: auto;
+        left: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 100%;
+        left: 0px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        transition: width 0.2s ease 0.1s, left 0.2s ease,
+          transform 0.2s ease 0.3s, background-color 0.2s ease;
+      }
+
+      span.tLine {
+        top: 0px;
+      }
+
+      span.mLine {
+        top: 13px;
+        opacity: 0;
+      }
+
+      span.bLine {
+        top: 26px;
+      }
+
+      .label {
+        position: absolute;
+        color: #f4f4f4;
+        left: 0px;
+        top: 2px;
+        width: 100%;
+        text-align: center;
+        transition: all 0.4s ease;
+        font-size: 1em;
+      }
+
+      div.backBtn:hover span.label {
+        left: 25px;
+      }
+
+      div.backBtn:hover span.line {
+        left: -10px;
+        height: 5px;
+        background-color: #60bbf7;
+      }
+
+      div.backBtn:hover span.tLine {
+        width: 25px;
+        transform: rotate(-45deg);
+        left: -15px;
+        top: 6px;
+      }
+
+      div.backBtn:hover span.mLine {
+        opacity: 1;
+        width: 30px;
+      }
+
+      div.backBtn:hover span.bLine {
+        width: 25px;
+        transform: rotate(45deg);
+        left: -15px;
+        top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="contact-page-sec">
+      
+      <div class="backBtn">
+        <a href="{% url 'home' %}">
+        <span class="line tLine"></span>
+        <span class="line mLine"></span>
+       
+        <span class="label">Home</span>
+        <span class="line bLine"></span>
+        </a>
+      </div>
+      
+      <div class="container">
+        <div class="col-md-4"></div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+                  <lottie-player
+                    src="https://assets1.lottiefiles.com/private_files/lf30_nfrwwnhp.json"
+                    background="transparent"
+                    speed="1"
+                    style="justify-content: center; height: 52px"
+                    loop
+                    autoplay
+                  >
+                  </lottie-player>
+                </div>
+                <div class="contact-info-text">
+                  <h2>LinkedIn</h2>
+                  <span>Connect With Us</span>
+                  <a
+                    href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/"
+                    target="blank"
+                  >
+                    <span>Click Here</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <lottie-player
+                    src="https://assets9.lottiefiles.com/packages/lf20_8SdEu9.json"
+                    background="transparent"
+                    speed="1"
+                    style="justify-content: center; height: 52px"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+                <div class="contact-info-text">
+                  <h2>E-mail</h2>
+                  <span>Write Us At</span>
+                  <a href="mailto:iee@sot.pdpu.ac.in" target="blank"
+                    ><span>Click Here </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <lottie-player
+                    src="https://assets10.lottiefiles.com/packages/lf20_miwpcyh5.json"
+                    background="transparent"
+                    speed="1"
+                    style="justify-content: center; height: 52px"
+                    loop
+                    autoplay
+                  >
+                  </lottie-player>
+                </div>
+                <div class="contact-info-text">
+                  <h2>Instagram</h2>
+                  <span>Follow Us At</span>
+                  <a href="https://www.instagram.com/ieeepdeu/" target="blank">
+                    <span>@ieeepdeu</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <lottie-player
+                    src="https://assets9.lottiefiles.com/packages/lf20_CEyvj2.json"
+                    background="transparent"
+                    speed="1"
+                    style="justify-content: center; height: 52px"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+                <div class="contact-info-text">
+                  <h2>address</h2>
+                  <span>Knowledge Corridor, Raisan Village, Sector 7 </span>
+                  <span>Gandhinagar, Gujarat , INDIA</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--This is for twitter-->
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <lottie-player
+                    src="https://assets6.lottiefiles.com/packages/lf20_dgBN4P.json"
+                    background="transparent"
+                    speed="1"
+                    style="justify-content: center; height: 52px"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+                <div class="contact-info-text">
+                  <h2>GitHub</h2>
+                  <span>info@LoremIpsum.com</span>
+                  <span>yourmail@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <lottie-player
+                    src="https://assets3.lottiefiles.com/packages/lf20_nv5aXa.json"
+                    background="transparent"
+                    speed="1"
+                    style="justify-content: center; height: 52px"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+                <div class="contact-info-text">
+                  <h2>office time</h2>
+                  <span>Mon - Wed 10:00 am - 12:00 pm</span>
+                  <span>Thu - Sat 12:00 pm - 2:00 pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>

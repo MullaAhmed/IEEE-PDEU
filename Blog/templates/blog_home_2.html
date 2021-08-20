@@ -1,0 +1,86 @@
+{% extends "template_blog_home.html" %}
+
+{% block content %}
+<div> 
+
+<div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+    <div class="post-image">
+        <div>
+            <img src="https://drive.google.com/uc?export=view&id=1eVFkuPBegn57tgxoeOxdGodLDW8WapwN" class="img" alt="blog1">
+        </div>
+        <div class="post-info flex-row">
+            <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Mihir Trivedi</span>
+            <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;8th August, 2021</span>
+        </div>
+    </div>
+    <div class="post-title">
+        <a href="#">From Black and White to Green Screen Transition in Showbiz Business</a>
+        <p style="text-align:justify;" >Originated in the 1800s, Cinema has certainly evolved uniquely, unlike any other industry. 
+            From the first film by Louis Le Prince in 1888 to Georges Méliès' Le Voyage dans la Lune (A Trip to the Moon) to Animation &
+             much more, cinema has changed the perspective of how we perceive the world. Now, we no longer need to buy bulky, 
+            expensive cinema cameras to create content, we can do the same with our smartphones.
+        </p>
+        <a href="{% url 'page2.1' %}">
+        <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+        </a>
+    </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+<div class="post-image">
+    <div>
+        <img src="https://drive.google.com/uc?export=view&id=1f9f-gVt18eh-sXqkmkqFfqo5BiaTmKc8" class="img" alt="blog1">
+    </div>
+    <div class="post-info flex-row">
+        <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp; Kunj Shah</span>
+        <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;5th August, 2021</span>
+        
+    </div>
+</div>
+<div class="post-title">
+    <a href="#">Untapped Goldmine : The Gaming Industry</a>
+    <p style="text-align:justify;" >Learning to code can get difficult at times but if you want to have it in a fun way then 
+        there’s no better approach to it than Game Development ! Developing games allow you to have a better understanding of 
+        problem-solving and enables you to have a better experience in the designing sector as well. Lately, companies have been 
+        looking to hire developers with more and more experience in languages like C++, HTML, CSS so it would be an advantage for you 
+        if you are learning game development. 
+        Also, the pay scale for the game developers is pretty good that can go as high as $100,000. 
+    </p>
+    <a href="{% url 'page2.2' %}">
+    <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+    </a>
+</div>
+</div>
+<!-- --------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+    <div class="post-image">
+        <div>
+            <img src="https://drive.google.com/uc?export=view&id=1GtSEnRfIwIq13TJvLRM1U5R-F97gphU0" class="img" alt="blog1">
+        </div>
+        <div class="post-info flex-row">
+            <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Namya Vyas</span>
+            <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;1st August, 2021</span>
+            
+        </div>
+    </div>
+    <div class="post-title">
+        <a href="#">The New Gaming Battlefield - AR & VR</a>
+        <p style="text-align:justify;" > The growth of online gaming platforms has exponentially increased since the pandemic 
+            increasing online gaming to which AR and VR have pulled it to a next level. According to the latest report of Google-KPMG, 
+            the online gaming industry in India is expected to display growth of $1 billion in 2021 which was $360 million in 2017. 
+            Not only in India but even globally the market for only AR and VR Gaming is forecast to reach $11.0 billion by 2026, growing 
+            at a CAGR of 18.5% from 2021 to 2026.
+
+        </p>
+        <a href="{% url 'page2.3' %}">
+        <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+        </a>
+    </div>
+</div>
+<!-- --------------------------------------------------------------- -->
+
+</div>
+{% endblock %}

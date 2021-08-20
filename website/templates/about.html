@@ -1,0 +1,397 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    main .site-title{
+    background: url( "{% static 'images/Background-image.jpg' %}");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+main .blog{
+    background: url("{% static 'images/Abract01.png' %}");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+section {
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(20% at right 70%);
+}
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+}
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.container .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.container .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.container .card .content .imgBx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.container .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .card .content .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+.container .card .content .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.container .card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+.container .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+}
+.container .card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.container .card .sci li a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.about{
+    color: #fff;
+    margin: 30px;
+} 
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous"
+  />
+  
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'About' %}" class="text-gray">About</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}"><li class="nav-link">
+                        Home
+                    </li></a>
+                    <a href="{% url 'Blog Home1' %}"><li class="nav-link">
+                        Blog
+                    </li></a>
+
+                     <a href="{% url 'events' %}"><li class="nav-link">
+                       Events
+                    </li></a>
+                    <a href="{% url 'team' %}">
+                      <li class="nav-link">
+                          Team
+                      </li>
+                  </a>
+                    <a href="{% url 'Contact' %}">  <li class="nav-link">
+                       Contact Us
+                    </li></a>              
+                </ul>
+            </div>
+            <div class="social text-gray">
+              <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+    </nav>
+
+    
+
+    <main>
+        <!-- -----------x---------- Site Content -------------x------------>
+  
+        <section>
+            <div class="container">
+              <div class="card">
+                <div class="content">
+                  <center>
+                  <div class="contentBx" >
+                    <h2>Mission Statement<br /></h2>
+                    <p>IEEE's core purpose is to foster technological innovation and excellence for the benefit of humanity.</p>
+                  </div>
+                  </center>
+                </div>
+                
+              </div>
+      
+              <div class="card">
+                <div class="content">
+                  <center>
+                  <div class="contentBx" >
+                    <img src="{% static 'images/logo.svg' %}" style="width:18rem;" alt="" />
+
+                    
+                  </div>
+                  </center>
+                </div>
+                
+              
+              </div>
+
+              <div class="card">
+                <div class="content">
+                  <center>
+                  <div class="contentBx" >
+                    <h2>Plan Statement<br /></h2>
+                    <p >IEEE will foster a collaborative environment that is open, inclusive, 
+                        and free of bias and will continue to sustain the strength, reach, and vitality of our organization for future generations. 
+                        </p>
+                  </div>
+                  </center>
+                </div>
+           
+              </div>
+            </div>
+          </section>
+      
+          
+            <div class="about">
+           <h2>Meaning of I-E-E-E</h2>
+           <p style="text-align:justify;">
+            IEEE, pronounced "Eye-triple-E," stands for the Institute of Electrical and Electronics Engineers. The association is chartered under this name and it is the full legal name.
+
+            However, as the world's largest technical professional organization, IEEE's membership has long been composed of engineers, 
+            scientists, and allied professionals. These include computer scientists, software developers, information technology professionals, 
+            physicists, medical doctors, and many others in addition to IEEE's electrical and electronics engineering core. 
+            For this reason the organization no longer goes by the full name, except on legal business documents, and is referred to simply as IEEE.
+           </p>
+           <br>
+           <h2>Vision Statement<br /></h2>
+          <p style="text-align:justify;">IEEE will be essential to the global technical community and to technical professionals everywhere, 
+                        and be universally recognized for the contributions of 
+                        technology and of technical professionals in improving global conditions.</p>
+           <br>
+           <h2>Foundation of the AIEE</h2>
+           <p style="text-align:justify;">In the spring of 1884, a small group of individuals in the electrical professions met in New York, USA. 
+            They formed a new organization to support professionals in their nascent field and to aid them in their efforts to apply innovation for the 
+            betterment of humanity—the American Institute of Electrical Engineers, or AIEE for short. 
+            That October, the AIEE held its first technical meeting in Philadelphia, PA, USA. Many early leaders, such as 
+            founding President Norvin Green of Western Union, came from telegraphy.
+
+            Others, such as Thomas Edison, came from power, while Alexander Graham Bell represented the telephone industry. 
+            Electric power spread rapidly, enhanced by innovations such as AC induction motors, long-distance AC transmission, 
+            and larger power plants. Companies such as AEG, General Electric, Siemens & Halske, and Westinghouse underwrote its commercialization. 
+            The AIEE became increasingly focused on electrical power and its ability to change people’s lives through the unprecedented products and 
+            services it could deliver. There was a secondary focus on wired communication, both the telegraph and the telephone. 
+            Through technical meetings, publications, and promotion of standards, the AIEE led the growth of the electrical engineering profession, 
+            while through local sections and student branches, it brought its benefits to engineers in widespread places.</p>
+
+            <br>
+           <h2>Foundation of the IRE</h2>
+           <p style="text-align:justify;">A new industry arose, beginning with Guglielmo Marconi’s wireless telegraphy experiments in 1895-1896. 
+               What was originally called “wireless” telegraphy became radio with the electrical amplification possibilities inherent 
+               in the vacuum tubes that evolved from John Fleming’s diode and Lee de Forest’s triode. With the new industry came 
+               a new society in 1912, the Institute of Radio Engineers.
+
+            The IRE was modeled on the AIEE but was devoted to radio, and then broadly to electronics. 
+            It also furthered its profession by linking members through publications, standards, 
+            and conferences and encouraging them to organize local sections and meetings to exchange information and ideas.</p>
+
+            <br>
+           <h2>The societies converge and merge</h2>
+           <p style="text-align:justify;"> Through the help of leadership from the two societies, and with the applications of its members' innovations to industry, 
+               electricity wove its way more deeply into every corner of life, through television, radar, transistors, and computers. Increasingly, 
+               the interests of the societies overlapped.
+
+            Membership in both societies grew, but beginning in the 1940s, the IRE grew faster and in 1957 became the larger group. 
+            On 1 January 1963, the AIEE and the IRE merged to form the Institute of Electrical and Electronics Engineers, or IEEE. 
+            At its formation, IEEE had 150,000 members, 140,000 of whom resided in the United States  </p>
+
+            <br>
+           <h2>Growth and globalization</h2>
+           <p style="text-align:justify;">Over the decades that followed, the social roles of the technologies under IEEE’s aegis continued to 
+               spread across the world and reach into more and more areas of people's lives. The professional groups and 
+               technical boards of the predecessor institutions evolved into IEEE Societies. By the early 21st century, 
+               IEEE served its members and their interests with 39 Societies; 130 journals, transactions, and magazines; 
+               more than 300 conferences annually; and 900 active standards.
+
+            Since that time, computers evolved from massive mainframes to desktop appliances to portable devices, 
+            linked to global networks connected by copper wire, microwaves, satellites, or fiber optics. IEEE’s fields of 
+            interest expanded well beyond electrical and electronics engineering and computing into areas such as micro- and 
+            nanotechnologies, ultrasonics, bioengineering, robotics, electronic materials, and many others. Electronics became 
+            ubiquitous, integrated in everything from jet cockpits to industrial robots to medical imaging.
+            
+            As technologies and the industries that developed them increasingly transcended national boundaries, IEEE has kept pace. 
+            It is now a global institution that uses the innovations of the practitioners it represents to enhance IEEE’s excellence in delivering 
+            products and services to members, industries, and the public at large. Publications and educational programs are delivered online, 
+            as are member services such as renewal and elections. By 2020, IEEE comprised over 395,000 members in 160 countries. 
+            Through its global network of geographical units, publications, web services, and conferences, IEEE remains the 
+            world's largest technical professional association.</p>
+        
+            <br>
+            <h2>What does the Student Chapter of IEEE at Pandit Deendayal Energy University (PDEU) offer to an individual?</h2>
+            <p style="text-align:justify;">
+           
+                1.IEEE Student Chapter, PDEU provides opportunities to meet and learn from fellow IEEE Students and Graduate Student Members and engage with professional IEEE members locally. 
+              <br>
+                2.IEEE Student Chapter, PDEU is one of the most positive elements of a student’s academic career, offering programs, activities, and professional networking opportunities that build critical skills outside of the classroom.
+            <br>
+                3.IEEE Student Chapter, PDEU gives students a community of peers and connections to faculties and industry professionals who drive innovation in countless technical fields. 
+             <br>
+                4.IEEE Student Chapter, PDEU involves students in activities, whether special projects, social and technical meetings, outreach programs, conferences, local Sections, or Regional opportunities, etc. that can help develop a record of accomplishment and capabilities beyond the norm.
+                <br>
+            
+            </p>
+          </div>
+    </main>
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p style="text-align:justify;" >IEEE, an association dedicated to advancing innovation and technological excellence for the benefit of humanity, 
+                    is the world's largest technical professional society. 
+                    It is designed to serve professionals involved in all aspects of the electrical, 
+                    electronic, and computing fields and related areas of science and technology that underlie modern civilization.
+                </p>
+            </div>
+            
+           
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+     
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

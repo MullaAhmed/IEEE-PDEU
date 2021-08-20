@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Base {% endblock %} </title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/page.css'%}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <style>
+        img {
+            display: flex;
+            max-width: 99%;
+            max-height: 99%;
+        }
+        p{
+            text-align:justify;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="{% url 'Blog Home1' %}" class="text-gray">Blog</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <a href="{% url 'home' %}">
+                        <li class="nav-link">
+                            Home
+                        </li>
+                    </a>
+                    <a href="{% url 'Blog Home1' %}">
+                        <li class="nav-link">
+                            Blog
+                        </li>
+                    </a>
+
+                    <a href="{% url 'events' %}">
+                        <li class="nav-link">
+                            Events
+                        </li>
+                    </a>
+
+                    <a href="{% url 'About' %}">
+                        <li class="nav-link">
+                            About
+                        </li>
+                    </a>
+
+                    <a href="{% url 'team' %}">
+                        <li class="nav-link">
+                            Team
+                        </li>
+                    </a>
+
+                    <a href="{% url 'Contact' %}">
+                        <li class="nav-link">
+                            Contact Us
+                        </li>
+                    </a>
+                    
+                
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main style="align-items:center;">
+
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                {% block cover_image %}
+                                <img src="{% static 'images/Blog-post/post-1.jpg'%}" class="img" alt="blog1" />
+                                {% endblock %}
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;{% block author %}Author 
+                                    {% endblock %}</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp; {% block date %}7th
+                                    November, 2019 {% endblock %}</span>
+                            </div>
+
+                        </div>
+                        <div class="post-title">
+
+                            <a href="#">
+                                <h1>
+                                    {% block heading %}
+                                  
+                                    {% endblock %}</h1>
+
+                            </a>
+
+
+                            <p>
+                                {% block content %}
+                               
+                                {% endblock %}
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="side-image">
+                    <!--  to write on side  -->
+
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p style="text-align:justify;" >IEEE, an association dedicated to advancing innovation and technological excellence for the benefit
+                    of humanity,
+                    is the world's largest technical professional society.
+                    It is designed to serve professionals involved in all aspects of the electrical,
+                    electronic, and computing fields and related areas of science and technology that underlie modern
+                    civilization.</p>
+            </div>
+
+
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

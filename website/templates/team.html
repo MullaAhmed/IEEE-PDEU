@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  .sec4 {
+    padding: 100px 0;
+  }
+
+  .sec4 h1 {
+    text-transform: uppercase;
+    color: azure;
+  }
+
+  .sec4-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+
+  .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19%;
+    min-height: 270px;
+    border: 1px solid #fff;
+    margin-bottom: 40px;
+    overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (max-device-width: 600px) {
+    .box {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .img {
+      display: block;
+      margin-left: 10%;
+      
+    }
+  }
+
+  .box h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: azure;
+    opacity: 0;
+  }
+
+  .sec4-boxes .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+    transition: all ease 1s;
+  }
+  .box:hover h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: azure;
+    opacity: 1;
+  }
+
+  .box:hover .img {
+    opacity: 0;
+  }
+  main .site-title {
+        background: url("{% static 'images/Background-image.png' %}");
+        background-size: cover;
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Team</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+  <!-- --------- Owl-Carousel ------------------->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <!-- ------------ AOS Library ------------------------- -->
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+  <!-- Custom Style   -->
+  <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+
+</head>
+
+<body>
+
+  <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="{% url 'team' %}" class="text-gray">Team</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <a href="{% url 'home' %}">
+            <li class="nav-link">
+              Home
+            </li>
+          </a>
+          <a href="{% url 'Blog Home1' %}">
+            <li class="nav-link">
+              Blog
+            </li>
+          </a>
+
+          <a href="{% url 'About' %}">
+            <li class="nav-link">
+              About
+            </li>
+          </a>
+          <a href="{% url 'events' %}">
+            <li class="nav-link">
+                Events
+            </li>
+        </a>
+          <a href="{% url 'Contact' %}">
+            <li class="nav-link">
+              Contact Us
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="social text-gray">
+        <a href="https://www.instagram.com/ieeepdeu/" target="blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:ieee@sot.pdpu.ac.in" target="blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/ieee-student-chapter-pdeu-33a225218/" target="blank"><i
+            class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+  <!----------------------------- Main Site Section ------------------------------>
+
+  <main>
+    <section class="site-title">
+      <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'images/logo.svg' %}" alt="" />
+          <h2>Our Team</h2>
+
+          <p>
+            “Coming together is a beginning. Keeping together is progress. Working together is success.”
+
+            <br>- Henry Ford
+          </p>
+      </div>
+  </section>
+
+    <section class="sec4" data-scene>
+      <div class="container">
+        <div class="sec4-inner" data-aos="zoom-out-right">
+        
+          <div class="sec4-boxes">
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/sachin-kumar-gupta/" target="blank">President</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/SachinGupta.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+            <div class="box">
+              <h6><a href="http://www.linkedin.com/in/priyasrivastava730" target="blank">Vice President</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/PriyaSrivastava.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+            <div class="box">
+              <h6><a href="http://www.linkedin.com/in/nidhi-zala-2307" target="blank">Treasurer</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/NIDHI ZALA.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+
+          </div>
+          <div class="sec4-boxes">
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/kartavipatel219" target="blank">Advisor</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Kartavi Patel.jpeg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/dikshant-sharma-87810b208" target="blank">Logistics Head</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Dikshant Sharma.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="http://www.linkedin.com/in/kavitjshah" target="blank">Technical Head </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/KavitShah.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/namya-vyas-292513217/" target="blank">Technical Head </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Namya Vyas.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/priyansh-t07" target="blank">Publicity Head</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Priyansh Tratiya.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/ahmed-mulla-548872204/" target="blank">Publicity Team </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Ahmed Mulla.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/prisha-rohan-b21148200" target="blank">Graphics Head</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Prisha Rohan.png' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/shachi-naik-b434a61b2" target="blank">Graphics Team</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Shachi Naik.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/saloni-modi-b65881200/" target="blank">Documentation Head </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Saloni Modi.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="http://www.linkedin.com/in/sahil-khadayate-8abb55213" target="blank">Documentation Team </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Sahil Khadayate.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/hardik-inani-122582189" target="blank">Publication Head </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Hardik Inani.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/harshvardhan-gaikwad-8471971bb" target="blank">Publication Team </a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Harshvardhan Gaikwad.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="" target="blank">Social Media Head</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Smer Lakhani.JPG' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+            <div class="box">
+              <h6><a href="https://www.linkedin.com/in/sarthak-kapaliya-2723bb202" target="blank">Social Media Team</a></h6>
+              <div class="img">
+                <img src="{% static 'images/comittee/Sarthak_Kapaliya.jpg' %}" height="270"
+                  width="292" alt="" />
+              </div>
+            </div>
+
+  
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+
+  <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+  <!-- --------------------------- Footer ---------------------------------------- -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+        <h2>About us</h2>
+        <p style="text-align:justify;" >IEEE, an association dedicated to advancing innovation and technological excellence for the benefit of
+          humanity,
+          is the world's largest technical professional society.
+          It is designed to serve professionals involved in all aspects of the electrical,
+          electronic, and computing fields and related areas of science and technology that underlie modern
+          civilization.</p>
+      </div>
+
+
+      <div class="follow" data-aos="fade-left" data-aos-delay="200">
+        <h2>Follow us</h2>
+        <p>Let us be Social</p>
+        <div>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fas fa-envelope"></i>
+        </div>
+      </div>
+    </div>
+    <div class="rights flex-row">
+      <h4 class="text-gray">
+        Copyright ©2021 All rights reserved </a>
+      </h4>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+  </footer>
+
+  <!-- -------------x------------- Footer --------------------x------------------- -->
+
+  <!-- Jquery Library file -->
+  <script src="{% static 'js/Jquery3.4.1.min.js' %}"></script>
+
+  <!-- --------- Owl-Carousel js ------------------->
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+  <!-- ------------ AOS js Library  ------------------------- -->
+  <script src="{% static 'js/aos.js' %}"></script>
+
+  <!-- Custom Javascript file -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
